@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Geist", sans-serif;
+
+  --container-8xl: 88rem;
+
+  --color-woodsmoke-50: #f6f6f6;
+  --color-woodsmoke-100: #e7e7e7;
+  --color-woodsmoke-200: #d1d1d1;
+  --color-woodsmoke-300: #b0b0b0;
+  --color-woodsmoke-400: #888888;
+  --color-woodsmoke-500: #6d6d6d;
+  --color-woodsmoke-600: #5d5d5d;
+  --color-woodsmoke-700: #4f4f4f;
+  --color-woodsmoke-800: #454545;
+  --color-woodsmoke-900: #3d3d3d;
+  --color-woodsmoke-950: #161616;
+
+  --color-sushi-50: #f4f9ec;
+  --color-sushi-100: #e5f1d6;
+  --color-sushi-200: #cee4b2;
+  --color-sushi-300: #add185;
+  --color-sushi-400: #8fbd5e;
+  --color-sushi-500: #7db347;
+  --color-sushi-600: #578030;
+  --color-sushi-700: #446328;
+  --color-sushi-800: #394f25;
+  --color-sushi-900: #324423;
+  --color-sushi-950: #18240f;
+
+  --color-meteorite-50: #f6f5fd;
+  --color-meteorite-100: #eeecfb;
+  --color-meteorite-200: #e0dcf8;
+  --color-meteorite-300: #c8bff3;
+  --color-meteorite-400: #ac9aeb;
+  --color-meteorite-500: #8e71e1;
+  --color-meteorite-600: #7e53d4;
+  --color-meteorite-700: #6d41c0;
+  --color-meteorite-800: #5c36a1;
+  --color-meteorite-900: #4c2e84;
+  --color-meteorite-950: #3b2370;
+}
+
+@layer base {
+  body, #root {
+    @apply bg-woodsmoke-950 antialiased min-h-screen flex flex-col;
+  }
+}
