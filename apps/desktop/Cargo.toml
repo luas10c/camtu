@@ -1,0 +1,33 @@
+[package]
+name = "camtu-desktop"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "2.5.6", features = [] }
+
+[dependencies]
+camtu-platform-linux = { path = "../../crates/platform-linux" }
+camtu-platform-windows = { path = "../../crates/platform-windows" }
+camtu-platform-macos = { path = "../../crates/platform-macos" }
+log = "0.4.28"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+tauri = { version = "2.10.3", features = [] }
+tauri-plugin-log = "2.7.1"
+tauri-plugin-process = "2.3.1"
+tauri-plugin-opener = "2.5.3"
+tauri-plugin-store = "2.4.2"
+thiserror = "2.0.18"
+tokio = { version = "1.50.0", features = ["full"] }
+tokio-tungstenite = "0.29.0"
+webrtc = "0.17.1"
+ffmpeg-next = "8.1.0"
+
+[target.'cfg(any(target_os = "macos", windows, target_os = "linux"))'.dependencies]
+tauri-plugin-positioner = "2.3.1"
+tauri-plugin-updater = "2.10.0"

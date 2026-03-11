@@ -1,0 +1,25 @@
+{
+  "name": "camtu",
+  "description": "stream your lens, anywhere",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:desktop": "npm --prefix ./apps/web exec tauri dev",
+    "build:desktop": "npm --prefix ./apps/web exec tauri build",
+    "dev:web": "npm run dev -w web",
+    "build:web": "npm run build -w web",
+    "lint:web": "npm run lint -w web",
+    "start:mobile": "npm run start -w mobile",
+    "android:mobile": "npm run android -w mobile",
+    "build-android": "npm run build-android -w mobile",
+    "ios:mobile": "npm run ios -w mobile",
+    "build-ios:mobile": "npm run build-ios -w mobile",
+    "lint:mobile": "npm run lint -w mobile"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "license": "MIT"
+}
